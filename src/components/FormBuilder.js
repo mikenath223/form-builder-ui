@@ -78,7 +78,7 @@ const FormBuilder = () => {
 
   return (
     <section className="container mx-auto mt-8">
-      <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 w-11/12 bg-white shadow-lg rounded-lg p-6">
+      <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 w-11/12 bg-white shadow-lg rounded-lg p-6 mx-auto">
         <FieldTypes fieldTypes={fieldTypes} handleDragStartNewField={handleDragStartNewField} />
 
         <div
