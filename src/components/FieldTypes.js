@@ -1,6 +1,6 @@
 export const FieldTypes = ({ fieldTypes = [], handleDragStartNewField }) => {
   return (
-    <div className="col-span-1 border-r pr-4">
+    <div className="col-span-1 xl:border-r pr-4">
       <h3 className="text-lg font-semibold mb-4">Field Types</h3>
       {fieldTypes.map((field) => (
         <div

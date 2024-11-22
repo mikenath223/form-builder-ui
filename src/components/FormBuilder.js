@@ -78,11 +78,11 @@ const FormBuilder = () => {
 
   return (
     <section className="container mx-auto mt-8">
-      <div className="grid grid-cols-4 gap-4 w-11/12 bg-white shadow-lg rounded-lg p-6">
+      <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 w-11/12 bg-white shadow-lg rounded-lg p-6">
         <FieldTypes fieldTypes={fieldTypes} handleDragStartNewField={handleDragStartNewField} />
 
         <div
-          className="col-span-2 bg-gray-50 border-dashed border-2 border-gray-300 p-4 rounded"
+          className="xl:col-span-2 bg-gray-50 border-dashed border-2 border-gray-300 p-4 rounded"
           onDrop={handleDropNewField}
           onDragOver={onDragOver}>
           <h3 className="text-lg font-semibold mb-4">Drop Fields Here</h3>
@@ -115,7 +115,7 @@ const FormBuilder = () => {
         )}
         <button
           onClick={handleGenerateForm}
-          className="col-span-4 mt-4 bg-green-500 text-white py-2 px-4 rounded shadow hover:bg-green-600 mx-auto">
+          className="xl:col-span-4 mt-4 self-baseline bg-green-500 text-white py-2 px-4 rounded shadow hover:bg-green-600 mx-auto">
           Generate Form
         </button>
         <GeneratedForm generatedFormFields={generatedFormFields} />

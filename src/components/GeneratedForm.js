@@ -8,7 +8,7 @@ export const GeneratedForm = ({ generatedFormFields = [] }) => {
 
   return (
     generatedFormFields.length > 0 && (
-      <div className="col-span-4 mt-6 p-4 bg-gray-50 rounded shadow min-w-[400px] mx-auto">
+      <div className="xl:col-span-4 mt-6 p-4 bg-gray-50 rounded shadow md:min-w-[400px] mx-auto">
         <h3 className="text-lg font-semibold mb-4">Generated Form</h3>
         <form onSubmit={handleFormSubmit}>
           {generatedFormFields.map((field) => (
