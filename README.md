@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Form Builder UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A lightweight, drag-and-drop form builder implemented using pure React.js without external form or UI libraries. This tool allows users to create and customize forms through an intuitive drag-and-drop interface.
 
-## Available Scripts
+## Live Link
 
-In the project directory, you can run:
+[Here is the Live Demo](https://form-builder-build.vercel.app/)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Pure React Implementation**: Built using only React.js/Next.js without external form libraries
+- **Drag and Drop Interface**: Intuitive drag-and-drop functionality for form element placement
+- **Native HTML Controls**: Utilizes standard HTML form elements for maximum compatibility
+- **Form Properties Editor**: Real-time editing of form element properties
+- **Customizable Elements**: Support for various form field types:
+  - Text Input
+  - Text Area
+  - Radio Buttons
+  - Checkboxes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+```bash
+# Clone the repository
+git clone [https://github.com/mikenath223/form-builder-ui]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Navigate to project directory
+cd form-builder-ui
 
-### `npm run build`
+# Install dependencies
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Start the development server
+npm run dev
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Adding Form Elements**:
+   - Drag elements from the sidebar onto the form canvas
+   - Elements will snap into place automatically
 
-### `npm run eject`
+2. **Editing Properties**:
+   - Click any form element to open its properties panel
+   - Edit properties like:
+     - Label text
+     - Placeholder text
+     - Required/Optional status
+     - Options (for dropdowns, radio buttons, etc.)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Rearranging Elements**:
+   - Drag and drop elements to reorder them within the form
+   - Use the handle icon to grab and move elements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Saving Forms**:
+   - Forms are automatically saved to local storage
+   - Export functionality available for saving forms as JSON
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+form-builder-ui/
+├── src/
+│   ├── components/
+│   │   ├── FormBuilder/
+│   │   ├── DragDrop/
+│   │   └── FormElements/
+│   ├── contexts/
+│   ├── hooks/
+│   └── App.js
+├── public/
+└── package.json
+```
 
-## Learn More
+## Implementation Details
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Drag and Drop
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The drag-and-drop functionality is implemented using the HTML5 Drag and Drop API, avoiding dependencies on external libraries. Key features include:
 
-### Code Splitting
+- Native drag events (`ondragstart`, `ondragover`, `ondrop`)
+- Visual feedback during drag operations
+- Precise element positioning
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Form State Management
 
-### Analyzing the Bundle Size
+Form state is managed using React's built-in state management features:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `useState` for local component state
+- `useContext` for sharing form state across components
+- Custom hooks for drag-and-drop logic
 
-### Making a Progressive Web App
+### Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The project uses native CSS with a focus on:
 
-### Advanced Configuration
+- Responsive design
+- Clean, modern aesthetic
+- Intuitive user interface
+- Drag and drop visual feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Development
 
-### Deployment
+To run the project in development mode:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm run dev
+```
 
-### `npm run build` fails to minify
+For production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run build
+npm start
+```
+
+## Browser Support
+
+Tested and compatible with:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Built with React.js
+- Uses HTML5 Drag and Drop API
+- Inspired by the need for a lightweight, library-free form builder
+
+---
+
+For bugs, feature requests, or additional information, please [open an issue](https://github.com/mikenath223/form-builder-ui/issues).
