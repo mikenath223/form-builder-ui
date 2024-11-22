@@ -71,7 +71,6 @@ const FormBuilder = () => {
 
   const onDragOver = (e) => e.preventDefault();
 
-  // Generate the final form
   const handleGenerateForm = () => {
     setGeneratedFormFields([...formFields]);
   };
