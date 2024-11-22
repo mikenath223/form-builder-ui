@@ -18,9 +18,12 @@ const FieldEditor = ({ field, setField }) => {
     <div className="bg-gray-50 p-4 rounded shadow-lg">
       <h3 className="text-lg font-semibold mb-4">Edit Field</h3>
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">Label:</label>
+        <label className="block text-sm font-medium text-gray-700" htmlFor="edit-field">
+          Label:
+        </label>
         <input
           type="text"
+          id="edit-field"
           value={field.label}
           onChange={updateLabel}
           className="mt-1 block w-full rounded border-gray-300 shadow-sm p-2"
@@ -28,7 +31,9 @@ const FieldEditor = ({ field, setField }) => {
       </div>
       {field.type === 'text' && (
         <div>
-          <label className="block text-sm font-medium text-gray-700">Placeholder:</label>
+          <label htmlFor="placeholder" className="block text-sm font-medium text-gray-700">
+            Placeholder:
+          </label>
           <input
             type="text"
             name="placeholder"

@@ -37,10 +37,12 @@ npm run dev
 ## Usage
 
 1. **Adding Form Elements**:
+
    - Drag elements from the sidebar onto the form canvas
    - Elements will snap into place automatically
 
 2. **Editing Properties**:
+
    - Click any form element to open its properties panel
    - Edit properties like:
      - Label text
@@ -49,6 +51,7 @@ npm run dev
      - Options (for dropdowns, radio buttons, etc.)
 
 3. **Rearranging Elements**:
+
    - Drag and drop elements to reorder them within the form
    - Use the handle icon to grab and move elements
 
@@ -117,6 +120,7 @@ npm start
 ## Browser Support
 
 Tested and compatible with:
+
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)

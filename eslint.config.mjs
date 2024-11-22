@@ -18,6 +18,7 @@ export default [
         }
       }
     },
+    ignores: ['**/temp.js', 'config/*', 'reportWebVitals.js'],
     settings: {
       react: {
         version: 'detect'

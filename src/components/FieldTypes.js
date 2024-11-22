@@ -7,8 +7,7 @@ export const FieldTypes = ({ fieldTypes = [], handleDragStartNewField }) => {
           key={field.type}
           draggable
           onDragStart={(e) => handleDragStartNewField(field.type, e)}
-          className="bg-blue-100 text-blue-600 rounded p-2 mb-2 shadow hover:bg-blue-200 cursor-grab"
-        >
+          className="bg-blue-100 text-blue-600 rounded p-2 mb-2 shadow hover:bg-blue-200 cursor-grab">
           {field.label}
         </div>
       ))}

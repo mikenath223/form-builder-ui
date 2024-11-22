@@ -28,7 +28,12 @@ const FormBuilder = () => {
       properties: {}
     };
 
-    const updatedFields = [...formFields, newField];
+    const targetIndex = formFields.findIndex((f) => f.id === e.target.id);
+    const updatedFields = [
+      ...formFields.slice(0, targetIndex),
+      newField,
+      ...formFields.slice(targetIndex)
+    ];
     setFormFields(updatedFields);
     setSelectedField(newField);
   };
@@ -79,23 +84,21 @@ const FormBuilder = () => {
         <div
           className="col-span-2 bg-gray-50 border-dashed border-2 border-gray-300 p-4 rounded"
           onDrop={handleDropNewField}
-          onDragOver={onDragOver}
-        >
+          onDragOver={onDragOver}>
           <h3 className="text-lg font-semibold mb-4">Drop Fields Here</h3>
           {formFields.map((field) => (
-            <div
+            <button
               key={field.id}
               draggable
               onDragStart={(e) => handleDragStartField(field.id, e)}
               onDragOver={(e) => e.preventDefault()}
               onDrop={(e) => handleDropReorderField(e, field.id)}
               onClick={() => setSelectedField(field)}
-              className={`p-3 mb-3 bg-white rounded shadow cursor-move ${
+              className={`p-3 mb-3 bg-white rounded shadow cursor-move block w-full ${
                 selectedField?.id === field.id ? 'ring-2 ring-blue-500' : ''
-              }`}
-            >
+              }`}>
               {field.label}
-            </div>
+            </button>
           ))}
         </div>
 
@@ -112,8 +115,7 @@ const FormBuilder = () => {
         )}
         <button
           onClick={handleGenerateForm}
-          className="col-span-4 mt-4 bg-green-500 text-white py-2 px-4 rounded shadow hover:bg-green-600 mx-auto"
-        >
+          className="col-span-4 mt-4 bg-green-500 text-white py-2 px-4 rounded shadow hover:bg-green-600 mx-auto">
           Generate Form
         </button>
         <GeneratedForm generatedFormFields={generatedFormFields} />
