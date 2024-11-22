@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import FieldEditor from './FieldEditor';
 import { GeneratedForm } from './GeneratedForm';
 import { FieldTypes } from './FieldTypes';
