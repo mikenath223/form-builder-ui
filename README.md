@@ -4,7 +4,7 @@ A lightweight, drag-and-drop form builder implemented using pure React.js withou
 
 ## Live Link
 
-[Here is the Live Demo](https://form-builder-build.vercel.app/)
+[Here is the Live Demo](https://form-builder-build.netlify.app/)
 
 ## Features
 
