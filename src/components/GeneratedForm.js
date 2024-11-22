@@ -4,8 +4,6 @@ export const GeneratedForm = ({ generatedFormFields = [] }) => {
     console.log('Form submitted!');
   };
 
-  console.log('generatedFormFields', generatedFormFields);
-
   return (
     generatedFormFields.length > 0 && (
       <div className="xl:col-span-4 mt-6 p-4 bg-gray-50 rounded shadow md:min-w-[400px] mx-auto">
