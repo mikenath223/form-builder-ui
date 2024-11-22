@@ -35,7 +35,8 @@ export const GeneratedForm = ({ generatedFormFields = [] }) => {
           ))}
           <button
             type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded shadow hover:bg-blue-600">
+            className="bg-blue-500 text-white py-2 px-4 rounded shadow hover:bg-blue-600"
+          >
             Submit
           </button>
         </form>

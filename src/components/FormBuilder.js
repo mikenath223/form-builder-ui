@@ -79,7 +79,8 @@ const FormBuilder = () => {
         <div
           className="col-span-2 bg-gray-50 border-dashed border-2 border-gray-300 p-4 rounded"
           onDrop={handleDropNewField}
-          onDragOver={onDragOver}>
+          onDragOver={onDragOver}
+        >
           <h3 className="text-lg font-semibold mb-4">Drop Fields Here</h3>
           {formFields.map((field) => (
             <div
@@ -91,7 +92,8 @@ const FormBuilder = () => {
               onClick={() => setSelectedField(field)}
               className={`p-3 mb-3 bg-white rounded shadow cursor-move ${
                 selectedField?.id === field.id ? 'ring-2 ring-blue-500' : ''
-              }`}>
+              }`}
+            >
               {field.label}
             </div>
           ))}
@@ -110,7 +112,8 @@ const FormBuilder = () => {
         )}
         <button
           onClick={handleGenerateForm}
-          className="col-span-4 mt-4 bg-green-500 text-white py-2 px-4 rounded shadow hover:bg-green-600 mx-auto">
+          className="col-span-4 mt-4 bg-green-500 text-white py-2 px-4 rounded shadow hover:bg-green-600 mx-auto"
+        >
           Generate Form
         </button>
         <GeneratedForm generatedFormFields={generatedFormFields} />
